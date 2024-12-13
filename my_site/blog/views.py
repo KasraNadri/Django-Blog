@@ -4,10 +4,10 @@ from django.shortcuts import render
 
 
 def starting_page(req):
-    pass
+    return render(req, 'blog/index.html')
 
 def posts(req):
     pass
 
 def post_detail(req):
-    
+    pass
