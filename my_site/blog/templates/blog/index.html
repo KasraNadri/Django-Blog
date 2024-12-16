@@ -6,17 +6,13 @@
 {% endblock %}
 
 {% block css_files %}
+    <link rel = "stylesheet" href = "{% static 'blog/includes/post.css' %}"/>
     <link rel = "stylesheet" href = "{% static 'blog/index.css' %}"/>
 {% endblock %}
 
 {% block content %}
 
-    <header id = "main-navigation">
-        <h1><a href = ""> Max's Blog </a></h1>
-    <nav>
-        <a href = ""> All Posts </a>
-    </nav>
-    </header>
+   
 
     <section id = "welcome">
         <header>
@@ -30,17 +26,7 @@
         <h2> My latest thoughts </h2>
 
         <ul>
-            <li>
-                <article class = "post">
-                    <a href = "">
-                        <img src = "{% static 'blog/images/mountains.jpg'%}" alt = "Mountain Hiking"/>
-                        <div class = "post__content">
-                            <h3>Mountain Hiking</h3>
-                            <p>There's nothing like the views you get in the mountains.</p>
-                        </div>
-                    </a>
-                </article>
-            </li>
+            {% include 'blog/includes/post.html' %}
         </ul>
 
     </section>
