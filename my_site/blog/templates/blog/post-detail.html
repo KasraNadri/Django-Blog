@@ -3,7 +3,7 @@
 
 
 {% block title %}
-    This Post Title
+    {{ post.title }}
 {% endblock %}
 
 {% block css_files %}
@@ -12,22 +12,20 @@
 
 {% block content %}
     <section id = "summary">
-        <h2>Post title</h2>
+        <h2>{{ post.title }}</h2>
 
         <article>
-            <img src = "{% static 'blog/images/mountains.jpg' %}" alt = "Post title"/>
-            <address>By Kasra</address>
+            <img src = "{% static 'blog/images/'|add:post.image %}" alt = "{{ post.title }}"/>  
+            <address>By {{ post.author }}</address>
             <div>
-                Last updated on <item> July 10th </item>
+                Last updated on <item> {{ post.date|date:'d M Y' }} </item>
             </div>
         </article>
 
     </section>
 
     <main>
-        <p>
-            .............
-        </p>
+        {{ post.content|linebreaks }}
     </main>
 
 {% endblock %}
