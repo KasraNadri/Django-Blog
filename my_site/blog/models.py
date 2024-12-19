@@ -20,7 +20,7 @@ class Author(models.Model):
 #----------------------------------------------
 #-------------------- POST --------------------
 #----------------------------------------------
-class Post(models.Models):
+class Post(models.Model):
     title = models.CharField(max_length= 150)
     excerpt = models.CharField(max_length = 300)
     image_name = models.CharField(max_length = 100)
