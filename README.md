@@ -1,3 +1,3 @@
 
-<img src="https://github.com/KasraNadri/Django-Blog/blob/main/Screenshot%20(291).png" width="500">
+<img src="https://github.com/KasraNadri/Django-Blog/blob/main/starting_page.png" width="500">
 
