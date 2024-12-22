@@ -11,10 +11,10 @@ all_posts = [
 ]
 
 def get_date(all_posts):
-    return all_posts['date']
+    return all_posts
 
 def starting_page(req):
-    latest_posts = Post.objects.all().order_by('-date')[:3]
+    latest_posts = Post.objects.all().order_by('-created_date')[:3]
     return render(req, 'blog/index.html', {
         'posts': latest_posts
     })
