@@ -23,5 +23,6 @@ def post_detail(req, slug):
     except:
         return
     return render(req, 'blog/post-detail.html', {
-        'post': identified_post
+        'post': identified_post,
+        'post_tags': identified_post.tags.all()
     })
